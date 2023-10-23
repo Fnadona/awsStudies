@@ -23,6 +23,6 @@ public class ClusterStack extends Stack {
     }
 
     public Cluster getCluster(){
-        return cluster;
+        return this.cluster;
     }
 }

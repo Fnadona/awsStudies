@@ -12,9 +12,9 @@ public class VpcStack extends Stack {
     public VpcStack(final Construct scope, final String id) {
         this(scope, id, null);
     }
-    public VpcStack(final Construct scope, final String id, StackProps props) {
+    public VpcStack(final Construct scope, final String id, final StackProps props) {
         super(scope, id, props);
-        Vpc.Builder.create(this, "Vpc01").maxAzs(3).build();
+        this.vpc = Vpc.Builder.create(this, "Vpc01").maxAzs(3).build();
     }
 
     public Vpc getVpc(){
